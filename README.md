@@ -5,4 +5,5 @@ Within the VPC there is a public subnet which the EC2 instance runs in. This sub
 I have also created 2 private subnets within the VPC each with an IP range of 10.0.1.0/24 and 10.0.2.0/24 respectively. These subnets are used for the RDS instance and each of these subnets are in a different availability zone which allows for higher resiliency incase one AZ fails. These subnets use a route table that only allows connections from any IP addresses within the VPC. This means that the private subnets can only be accessed from instances within the VPC. The Security Group for the RDS instance is configured to allow MYSQL connections on port 3306 from any IP address and TCP connections from the IP address of the EC2 instance from port 5000
 
 After running the application the following output is diplayed on the IP of the EC2 instance on port 8080:
+![Capture](https://user-images.githubusercontent.com/88770768/135625321-dbb4d623-90d8-4aad-bc07-729ada0d69ca.JPG)
 
